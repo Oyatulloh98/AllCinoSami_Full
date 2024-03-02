@@ -1,0 +1,98 @@
+    <div class="col-12">
+        <label for="inputSerialName4" class="form-label">Serial Janr</label>
+        @php
+        $id = old('categories', $serial->category_id);
+        @endphp
+        <label for="inputSerialName4" class="form-label">Category Name</label>
+        <select name="categories" class="form-control">
+            @foreach ($categories as $item)
+            <option value="{{ $item->id }}" {{ $id === $item->id ? 'selected' : '' }}>
+                {{ $item->name_uz }} | {{ $item->name_ru }}
+            </option>
+            @endforeach
+        </select>
+        @error('category')
+        <div class="alert alert-danger mt-1">{{ $message }}</div>
+        @enderror
+    </div>
+
+    <div class="col-12">
+        <div class="col-12">
+            <label for="inputSerialName4" class="form-label">Serial Brend </label>
+            @php
+            $id = old('brands', $serial->brand_id);
+            @endphp
+            <select name="brands" class="form-control">
+                @foreach ($brands as $item)
+                <option value="{{ $item->id }}" {{ $id === $item->id ? 'selected' : '' }}>
+                    {{ $item->name }}
+                </option>
+                @endforeach
+            </select>
+            @error('brand')
+            <div class="alert alert-danger mt-1">{{ $message }}</div>
+            @enderror
+        </div>
+    </div>
+
+
+
+    <td>
+        <button type="button" style="border: none" class="badge bg-info" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable{{ $serial->id }}">
+            <i class="bi bi-eye-fill"></i>
+        </button>
+        <div class="modal fade" id="modalDialogScrollable{{ $serial->id }}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ $serial->name_uz }} |
+                            {{ $serial->name_ru }}
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Default Table -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Part</th>
+                                    <th scope="col">Video</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Force Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        {{ $serial->serialVideoPath[0]['part'] }}
+                                    </td>
+                                    <td>
+                                        <a href="{{ isset($serial->serialVideoPath[0]['path']) ? asset('storage/videos_folder/' . $serial->serialVideoPath[0]['path']) : '#' }}">
+                                            <img src="{{ isset($serial->serialImagePath[0]['path']) ? asset('storage/images_folder/' . $serial->serialImagePath[0]['path']) : '#' }}" class="img img-thumbnail" width="30">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-{{ !empty($serial->serialVideoPath) && !empty($serial->serialVideoPath[0]['deleted_at']) ? 'danger' : 'success' }}" id="{{ $serial->id }}" onclick="serial_one_delete(event)">
+                                            <i>{{ !empty($serial->serialVideoPath) && !empty($serial->serialVideoPath[0]['deleted_at']) ? 'noactive' : 'active' }}</i>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-danger">
+                                            <i class="ri-delete-bin-2-fill delete-serial" id="{{ $serial->id }}"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Default Table Example -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="{{ route('serial.add', $serial->id) }}" class="btn btn-primary">serial qo'shish</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Modal Dialog Scrollable-->
+    </td>

@@ -1,0 +1,92 @@
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span {
+        color: aqua;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        color: white;
+    }
+}
+
+.serials .box-container {
+    @include grid(27rem);
+
+    .box {
+        border-radius: 1rem;
+        overflow: hidden;
+        background: rgb(22, 41, 36);
+
+        &:hover video {
+            transform: scale(1.1);
+        }
+
+        .video {
+            height: 20rem;
+            width: 100%;
+            overflow: hidden;
+
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .content {
+            padding: 2rem;
+            text-align: center;
+
+            h3 {
+                font-size: 2rem;
+                color: white;
+            }
+
+            h4 {
+                color: white;
+            }
+
+
+            p {
+                padding: 1rem 0;
+                font-size: 1rem;
+                color: aliceblue;
+                line-height: 2rem;
+            }
+
+            .viws {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                a{
+                    font-size: 1rem;
+                    color: aquamarine;
+                   
+
+                    &:hover i{
+                        margin-left: 3rem !important;
+                        color: red;
+                        font-size: 1.5rem;
+                    }
+
+                    i{
+                        padding-right: .5rem;
+                    }
+                }
+                span{
+                    font-size: 1rem;
+                    color: aquamarine;
+
+                }
+            }
+
+
+        }
+    }
+
+}

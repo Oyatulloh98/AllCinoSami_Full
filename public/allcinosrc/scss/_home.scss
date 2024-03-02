@@ -1,0 +1,27 @@
+.home{
+    margin: 0 auto;
+    margin-top: 12rem;
+    width: 90%;
+    border-radius: 1rem;
+    background: url('../img/bacgHome.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    .btn{
+        margin-top: 43rem;
+        width: 40rem;
+        padding-left: 16rem;
+        color: white;
+        border: 1.5px solid white;
+        &:hover{
+            background: white;
+            color: darkcyan;
+        }
+    }
+}

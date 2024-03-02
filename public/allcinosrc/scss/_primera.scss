@@ -1,0 +1,70 @@
+.primera{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 5rem;
+
+    .video-container{
+        flex: 1 1 42rem;
+
+        video{
+            border-radius: 1rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .controls{
+            text-align: center;
+            padding: 2rem 0;
+
+            span{
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                background: white;
+                cursor: pointer;
+                margin: .7rem;
+                 
+                &:hover{
+                    background: aqua;
+                }
+            }
+        }
+    }
+
+    .content{
+        flex: 1 1 42rem;
+        margin-bottom: .5rem;
+
+        span{
+            color: blueviolet;
+            font-size: 2rem;
+        }
+
+        h3{
+            color: white;
+            font-size: 4rem;
+            margin-top: .5rem;
+        }
+        p{
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: aliceblue;
+            line-height: 2rem;
+        }
+        .btnn{
+            margin-top: 3rem;
+            width: 20rem;
+            padding: 1rem 3rem;
+            border-radius: 1rem;
+            color: white;
+            border: 1.5px solid white;
+            &:hover{
+                background: white;
+                color: darkcyan;
+            }
+        }
+    }
+}

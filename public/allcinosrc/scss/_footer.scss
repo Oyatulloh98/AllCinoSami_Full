@@ -1,0 +1,106 @@
+.footer {
+    .box-container {
+        @include grid(27rem);
+    }
+
+    .box {
+        padding: 1rem 0;
+
+        .logo {
+            padding-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: teal;
+            padding: 1rem 0;
+            line-height: 2;
+
+            i {
+                padding-right: .5rem;
+                color: rgb(80, 182, 182);
+            }
+        }
+
+        .btn{
+            border: 1px solid teal;
+        }
+
+        .share {
+            padding-top: 1rem;
+
+            a {
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4rem;
+                font-size: 2rem;
+                border-radius: 50%;
+                font-size: 2rem;
+                border: 1px solid aqua;
+                color: aquamarine;
+                margin-right: .5rem;
+                text-align: center;
+
+                &:hover {
+                    background: aquamarine;
+                    color: rgb(8, 153, 153);
+                }
+            }
+        }
+
+        .links {
+            font-size: 1.4rem;
+            color: teal;
+            padding: 1rem 0;
+            display: block;
+
+            &:hover {
+                color: aquamarine;
+
+                i {
+                    padding-right: 2rem;
+                }
+
+
+            }
+
+            i {
+                padding-right: .5rem;
+                color: rgb(80, 182, 182);
+            }
+        }
+
+        form .email {
+            width: 100%;
+            border-radius: 5rem;
+            border: 1px solid teal;
+            background: none;
+            font-size: 1.5rem;
+            text-transform: none;
+            color: aquamarine;
+            margin-top: 1rem;
+            padding: 1.2rem 1.4em;
+        }
+
+    }
+
+
+}
+
+.creator{
+    background: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem 2rem;
+    color: aquamarine;
+
+    span{
+        color: teal;
+    }
+}

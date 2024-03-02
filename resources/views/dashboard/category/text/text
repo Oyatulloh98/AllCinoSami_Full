@@ -1,0 +1,94 @@
+   $(document).ready(function() {
+        $('.delete-category').click(function() {
+            var categoryId = $(this).attr('id'); // Get the category ID
+
+            // Confirm the deletion
+            // console.log(categoryId);
+            if (confirm("Are you sure you want to delete this category?")) {
+                // Get the CSRF token value from the meta tag
+                var csrfToken = $('meta[name="csrf-token"]').attr('content');
+                // Perform AJAX request
+                $.ajax({
+                    url: '/category/' +
+                        categoryId, // Construct the URL with the category ID
+                    type: 'DELETE', // Use DELETE method
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken
+                    },
+                    success: function(response) {
+                        // Handle success response
+                        $('#categorymirror').html('');
+                        $('#categorymirror').html(response.html);
+                        alert('Category deleted successfully!');
+                        // console.log(response);
+                        // Optionally, you can perform additional actions like removing the deleted category from the UI
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        alert('Error deleting category');
+                    }
+                });
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('.restore-category').click(function() {
+            var restoreid = $(this).attr('id');
+            if (confirm("Are you sure you want to restore this category?")) {
+                // Get the CSRF token value from the meta tag
+                var csrfToken = $('meta[name="csrf-token"]').attr('content');
+                // Perform AJAX request
+                $.ajax({
+                    url: '/recategory/' + restoreid, // Construct the URL with the category ID
+                    type: 'POST', // Use DELETE method
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken
+                    },
+                    success: function(response) {
+                        // Handle success response
+                        $('#categorydeletesmirror').html('');
+                        $('#categorydeletesmirror').html(response.html);
+                        alert('Category restored successfully!');
+                        // console.log(response);
+                        // Optionally, you can perform additional actions like removing the deleted category from the UI
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        alert('Error restoring category');
+                    }
+                });
+            }
+        })
+    });
+
+    $(document).ready(function() {
+        $('.forcedelete-category').click(function() {
+            var forcedeleteid = $(this).attr('id');
+            if (confirm("Are you sure you want to restore this category?")) {
+                // Get the CSRF token value from the meta tag
+                var csrfToken = $('meta[name="csrf-token"]').attr('content');
+                // Perform AJAX request
+                $.ajax({
+                    url: '/forcedelete/' +
+                        forcedeleteid, // Construct the URL with the category ID
+                    type: 'POST', // Use DELETE method
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken
+                    },
+                    success: function(response) {
+                        // Handle success response
+                        $('#categorydeletesmirror').html('');
+                        $('#categorydeletesmirror').html(response.html);
+                        alert('Category restored successfully!');
+                        // console.log(response);
+                        // Optionally, you can perform additional actions like removing the deleted category from the UI
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        alert('Error restoring category');
+                    }
+                });
+            }
+        })
+    });

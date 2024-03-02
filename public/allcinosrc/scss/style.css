@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgb(22, 41, 36);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: aquamarine;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: darkcyan;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.logo img {
+  width: 10rem;
+  height: 4rem;
+  padding-top: 1rem;
+  border-radius: 3px;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: cyan;
+  border: 1px solid chartreuse;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: darkcyan;
+  color: black;
+  border: none;
+}
+
+.btn .btn {
+  margin-top: 0;
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: aliceblue;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  margin: 0 auto;
+  margin-top: 12rem;
+  width: 90%;
+  border-radius: 1rem;
+  background: url("../img/bacgHome.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .btn {
+  margin-top: 43rem;
+  width: 40rem;
+  padding-left: 16rem;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.content .btn:hover {
+  background: white;
+  color: darkcyan;
+}
+
+.registration {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: -4rem;
+  background: darkslategray;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+}
+
+.registration form {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+}
+
+.registration form .input-box {
+  flex: 1 1 20rem;
+}
+
+.registration form .input-box span {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.registration form .input-box input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 5rem;
+  border: 1px solid white;
+  font-size: 1.6rem;
+  background: transparent;
+  color: lightgreen;
+  text-transform: none;
+  margin-top: 1rem;
+}
+
+.registration form .btn {
+  flex: 1 1 15rem;
+}
+
+.primera {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.primera .video-container {
+  flex: 1 1 42rem;
+}
+
+.primera .video-container video {
+  border-radius: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.primera .video-container .controls {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.primera .video-container .controls span {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  margin: 0.7rem;
+}
+
+.primera .video-container .controls span:hover {
+  background: aqua;
+}
+
+.primera .content {
+  flex: 1 1 42rem;
+  margin-bottom: 0.5rem;
+}
+
+.primera .content span {
+  color: blueviolet;
+  font-size: 2rem;
+}
+
+.primera .content h3 {
+  color: white;
+  font-size: 4rem;
+  margin-top: 0.5rem;
+}
+
+.primera .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: aliceblue;
+  line-height: 2rem;
+}
+
+.primera .content .btnn {
+  margin-top: 3rem;
+  width: 20rem;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.primera .content .btnn:hover {
+  background: white;
+  color: darkcyan;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: aqua;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+.films .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+
+.films .box-container .box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgb(22, 41, 36);
+}
+
+.films .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.films .box-container .box .img {
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.films .box-container .box .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: top;
+  object-fit: top;
+}
+
+.films .box-container .box .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.films .box-container .box .content h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.films .box-container .box .content p {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: aliceblue;
+  line-height: 1rem;
+}
+
+.films .box-container .box .content .viws {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.films .box-container .box .content .viws a {
+  font-size: 1rem;
+  color: aquamarine;
+}
+
+.films .box-container .box .content .viws a:hover i {
+  margin-left: 3rem !important;
+  color: red;
+  font-size: 1rem;
+}
+
+.films .box-container .box .content .viws a i {
+  padding-right: 0.5rem;
+}
+
+.films .box-container .box .content .viws span {
+  font-size: 1rem;
+  color: aquamarine;
+}
+
+.films .paginator_for_film {
+  border-radius: 50%;
+  margin: 30px auto;
+  height: 40px;
+  width: 100%;
+  background: rgb(76, 109, 102);
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: aqua;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+.serials .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+
+.serials .box-container .box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgb(22, 41, 36);
+}
+
+.serials .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.serials .box-container .box .img {
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.serials .box-container .box .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: top;
+  object-fit: top;
+}
+
+.serials .box-container .box .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.serials .box-container .box .content h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.serials .box-container .box .content h4 {
+  color: white;
+}
+
+.serials .box-container .box .content p {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: aliceblue;
+  line-height: 1rem;
+}
+
+.serials .box-container .box .content .viws {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.serials .box-container .box .content .viws a {
+  font-size: 1rem;
+  color: aquamarine;
+}
+
+.serials .box-container .box .content .viws a:hover i {
+  margin-left: 3rem !important;
+  color: red;
+  font-size: 1rem;
+}
+
+.serials .box-container .box .content .viws a i {
+  padding-right: 0.5rem;
+}
+
+.serials .box-container .box .content .viws span {
+  font-size: 1rem;
+  color: aquamarine;
+}
+
+.serials .paginator_for_serials {
+  border-radius: 50%;
+  margin: 30px auto;
+  height: 40px;
+  width: 100%;
+  background: rgb(76, 109, 102);
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+
+.banner {
+  background: url("../img/banner.png");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+  background-attachment: fixed;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.banner .content span {
+  font-size: 2rem;
+  color: rgb(22, 61, 61);
+  font-weight: bolder;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: rgb(5, 63, 44);
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.banner .content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: black;
+  line-height: 2;
+}
+
+.banner .content .banner_btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: teal;
+  border: 1px solid teal;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.banner .content .banner_btn:hover {
+  background: darkcyan;
+  color: black;
+  border: none;
+}
+
+.banner .content .banner_btn .btn {
+  margin-top: 0;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box {
+  padding: 1rem 0;
+}
+
+.footer .box .logo {
+  padding-bottom: 1rem;
+}
+
+.footer .box h3 {
+  font-size: 2.2rem;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footer .box p {
+  font-size: 1.2rem;
+  color: teal;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.footer .box p i {
+  padding-right: 0.5rem;
+  color: rgb(80, 182, 182);
+}
+
+.footer .box .btn {
+  border: 1px solid teal;
+}
+
+.footer .box .share {
+  padding-top: 1rem;
+}
+
+.footer .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 1px solid aqua;
+  color: aquamarine;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.footer .box .share a:hover {
+  background: aquamarine;
+  color: rgb(8, 153, 153);
+}
+
+.footer .box .links {
+  font-size: 1.4rem;
+  color: teal;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box .links:hover {
+  color: aquamarine;
+}
+
+.footer .box .links:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box .links i {
+  padding-right: 0.5rem;
+  color: rgb(80, 182, 182);
+}
+
+.footer .box form .email {
+  width: 100%;
+  border-radius: 5rem;
+  border: 1px solid teal;
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: aquamarine;
+  margin-top: 1rem;
+  padding: 1.2rem 1.4em;
+}
+
+.creator {
+  background: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 2rem;
+  padding: 3rem 2rem;
+  color: aquamarine;
+}
+.success_forpage {
+  background: green;
+}
+
+.creator span {
+  color: teal;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: teal;
+  border-radius: 5rem;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 3rem 3rem;
+  }
+
+  .home .content .btn {
+    margin-top: 38rem;
+    width: 30rem;
+    padding-left: 14rem;
+    color: white;
+    border: 1.5px solid white;
+  }
+
+  .home .content .btn:hover {
+    background: white;
+    color: darkcyan;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    background: rgb(22, 41, 36);
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(91% 0, 100% 0%, 100% 6%, 93% 6%);
+    clip-path: polygon(91% 0, 100% 0%, 100% 6%, 93% 6%);
+  }
+
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+
+  .btn {
+    margin-top: 0rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: cyan;
+    border: 1px solid chartreuse;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+  }
+
+  .btn:hover {
+    background: darkcyan;
+    color: black;
+    border: none;
+  }
+
+  .btn .btn {
+    margin-top: 0;
+  }
+
+  .home .content .btn {
+    margin-top: 40rem;
+    width: 30rem;
+    padding-left: 14rem;
+    color: white;
+    border: 1.5px solid white;
+  }
+
+  .home .content .btn:hover {
+    background: white;
+    color: darkcyan;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .content .btn {
+    margin-top: 42rem;
+    width: 30rem;
+    padding-left: 14rem;
+    color: white;
+    border: 1.5px solid white;
+  }
+
+  .home .content .btn:hover {
+    background: white;
+    color: darkcyan;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */

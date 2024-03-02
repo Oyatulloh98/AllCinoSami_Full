@@ -1,0 +1,53 @@
+.banner {
+    background: url('../img/banner.png');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    background-attachment: fixed;
+    text-align-last: center;
+
+    .content {
+        span {
+            font-size: 2rem;
+            color: rgb(22, 61, 61);
+            font-weight: bolder;
+        }
+
+        h3 {
+            font-size: 4rem;
+            color: rgb(5, 63, 44);
+            font-weight: bolder;
+            margin-top: 1rem;
+        }
+
+        p {
+            max-width: 60rem;
+            margin: 1rem auto;
+            font-size: 1.4rem;
+            color: black;
+            line-height: 2;
+        }
+
+        .banner_btn {
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.7rem;
+            color: teal;
+            border: 1px solid teal;
+            border-radius: 5rem;
+            cursor: pointer;
+            background: none;
+
+            &:hover {
+                background: darkcyan;
+                color: black;
+                border: none;
+            }
+
+            .btn {
+                margin-top: 0;
+            }
+        }
+    }
+}
